@@ -1,0 +1,179 @@
+@import "variables";
+
+header{
+    width: 100%;
+    height: auto;
+    // min-height: 100vh;
+    overflow: hidden;
+    background-color: var(--White);
+    padding-bottom: toRem(150);
+    
+    nav{
+        padding-top: toRem(52);
+        display: grid;
+        grid-template-columns: 20% 80%;
+        align-items: center;
+        margin-bottom: toRem(112);
+        transition: all 200ms ease-in-out;
+
+        @media screen and (max-width: toRem(739)){
+            margin-bottom: toRem(60);
+            
+        }
+
+
+        @media screen and (max-width: toRem(847)){
+            grid-template-columns: 24% 76%;
+            transition: all 200ms ease-in-out;
+        }
+
+        .logo{
+            display: flex;
+            align-items: center;
+            gap: toRem(44);
+
+            ul{
+                display: flex;
+                align-items: center;
+                gap: toRem(28);
+
+                a{
+                    color: var(--Grayish-Violet);
+                    font-weight: var(--font-bold);
+                    transition: color 200ms ease-in-out;
+
+                    &:hover{
+                        color: var(--Very-Dark-Blue);
+                    }
+                }
+            }
+        }
+
+        .nav-links{
+            display: flex;
+            justify-content: space-between;
+
+            @media screen and (max-width: toRem(739)){
+                display: none;
+            }
+            ul{
+                display: flex;
+                align-items: center;
+                gap: toRem(28);
+                a{
+                    color: var(--Grayish-Violet);
+                    font-weight: var(--font-bold);
+                    transition: color 200ms ease-in-out;
+                    
+                    &:hover{
+                        color: var(--Very-Dark-Blue);
+                    }
+                }
+            }
+        }
+        .hamburger-menu{
+            display: none;
+            justify-self: end;
+
+            i{
+               font-size: toRem(30);
+            }
+
+            @media screen and (max-width: toRem(739)){
+                display: block;
+            }
+        }
+    }
+
+    // Hero section
+    .hero{
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        align-items: center;
+        column-gap: toRem(97);
+
+        @media screen and (max-width: toRem(1014)){
+            column-gap: toRem(70);
+        }
+        @media screen and (max-width: toRem(854)){
+            column-gap: toRem(50);
+        }
+        @media screen and (max-width: toRem(739)){
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(2, auto);
+            grid-template-areas: "illustration"
+                                 "content";
+            row-gap: toRem(40);
+        }
+
+        .hero-title{
+            @media screen and (max-width: toRem(739)){
+                grid-area: content;
+                justify-self: center;
+                text-align: center;
+            }
+            h1{
+                font-size: toRem(60);
+                font-weight: var(--font-bold);
+                color: var(--Very-Dark-Blue);
+                line-height: toRem(70);
+                transition: all 300ms ease-in-out;
+
+                @media screen and (max-width: toRem(990)){
+                    font-size: toRem(52);
+                    
+                }
+                @media screen and (max-width: toRem(854)){
+                    font-size: toRem(45);
+                    line-height: toRem(54);
+                }
+            }
+            p{
+                font-size: toRem(18);
+                font-weight: var(--font-medium);
+                max-width: toRem(500);
+                color: var(--Gray);
+                margin-bottom: toRem(39);
+                transition: all 300ms ease-in-out;
+
+                @media screen and (max-width: toRem(990)){
+                    font-size: toRem(16);
+                }
+            }
+        }
+        .hero-image{
+            @media screen and (max-width: toRem(739)){
+                grid-area: illustration;
+                justify-self: center;
+            }
+            @media screen and (max-width: toRem(990)){
+                width: 500px;
+                height: auto;
+            }
+            @media screen and (max-width: toRem(503)){
+                width: 600px;
+                height: auto;
+            }
+            @media screen and (max-width: toRem(468)){
+                width: 549px;
+                height: auto;
+            }
+            @media screen and (max-width: toRem(397)){
+                width: 511px;
+                height: auto;
+            }
+            img{
+                
+                @media screen and (max-width: toRem(990)){
+                    width: 100%;
+                    height: 100%;
+               }
+               @media screen and (max-width: toRem(503)){
+               margin-left: toRem(136);
+            }
+            }
+        }
+    }
+
+   
+}

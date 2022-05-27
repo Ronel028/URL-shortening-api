@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <!-- font awesome icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- custom css -->
+  <link rel="stylesheet" href="./style/style.css">
+
+  <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+
+</head>
+<body>
+
+  <header>
+     <div class="container">
+       <!-- navigation -->
+        <nav>
+           <div class="logo">
+              <img src="./images/logo.svg" alt="Shortly">
+           </div>
+
+           <div class="nav-links">
+               <ul>
+                  <li><a href="#">Features</a></li>
+                  <li><a href="#">Pricing</a></li>
+                  <li><a href="#">Resources</a></li>
+               </ul>
+
+               <ul>
+                  <li><a href="#">Login</a></li>
+                  <li><a href="#" class="btn-cyan">Sign Up</a></li>
+               </ul>
+           </div>
+           <!-- nav-button mobile -->
+           <div class="hamburger-menu">
+             <i class="fa-solid fa-bars"></i>
+           </div>
+        </nav>
+      <!-- end nav -->
+
+      <!-- Hero Section -->
+        <div class="hero">
+           <div class="hero-title">
+              <h1>More than just shorter links</h1>
+              <p>Build your brand’s recognition and get detailed insights on how your links are performing.</p>
+              <li><a href="#" class="btn-cyan">Get Started</a></li>
+           </div>
+           <div class="hero-image">
+              <img src="./images/illustration-working.svg" alt="Illustration Working">
+           </div>
+        </div>
+     </div>
+
+  </header>
+  <!-- Statistics Section -->
+  <section class="statistics-section">
+     <div class="container">
+
+      <!-- input field -->
+         <div class="container input-link">
+            <div class="form">
+            <input type="text" placeholder="Shorten a link here...">
+            <button>Shorten It!</button>
+            <p class="hide">Please add a link</p>
+            </div>
+         </div>
+
+        <div class="output">
+            <ul>
+               <li>
+                  <div class="original-link">
+                     <p>https://www.frontendmentor.io</p>
+                  </div>
+                  <div class="shorter-link">
+                     <p>https://rel.ink/k4lKyK</p>
+                     <button class="copy-link">Copy</button>
+                  </div>
+               </li>
+
+               <li>
+                  <div class="original-link">
+                     <p>https://www.frontendmentor.io</p>
+                  </div>
+                  <div class="shorter-link">
+                     <p>https://rel.ink/k4lKyK</p>
+                     <button class="copy-link">Copy</button>
+                  </div>
+               </li>
+
+               <li>
+                  <div class="original-link">
+                     <p>https://www.frontendmentor.io</p>
+                  </div>
+                  <div class="shorter-link">
+                     <p>https://rel.ink/k4lKyK</p>
+                     <button class="copy-link">Copy</button>
+                  </div>
+               </li>
+               
+            </ul>
+         </div>
+
+         <!-- Advance Statistics -->
+         <div class="main-content">
+             <div class="title">
+                 <h2>Advanced Statistics</h2>
+                 <p>Track how your links are performing across the web with our advanced statistics dashboard.</p>
+             </div>
+             <div class="line">
+                <!-- line cyan -->
+             </div>
+             <div class="cards-container">
+                 <div class="card card1">
+                      <div class="image-container">
+                         <img src="./images/icon-brand-recognition.svg" alt="Brand Recognition">
+                      </div>
+                      <h4>Brand Recognition</h4>
+                      <p>Boost your brand recognition with each click. Generic links don’t mean a thing. Branded links help instil confidence in your content.</p>
+                 </div>
+                 <div class="card card2">
+                     <div class="image-container">
+                         <img src="./images/icon-detailed-records.svg" alt="Detaile Records">
+                     </div> 
+                     <h4>Detailed Records</h4>
+                     <p>Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.</p>
+                 </div>
+                 <div class="card card3">
+                     <div class="image-container">
+                         <img src="./images/icon-fully-customizable.svg" alt="Fully Customizable">
+                     </div>
+                     <h4>Fully Customizable</h4>
+                     <p>Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.</p>
+                 </div>
+             </div>
+         </div>
+     </div>
+      
+  </section>
+
+  <!-- boost you links section -->
+  <section class="boost">
+     <div class="container">
+        <div class="content">
+           <h2>Boost your links today</h2>
+           <a href="#" class="btn-cyan">Get Started</a>
+        </div>
+     </div>
+  </section>
+
+  <!-- footer -->
+  <footer>
+     <div class="container">
+        <div class="footer-content">
+           <!-- footer content -->
+
+           <!-- footer-logo -->
+           <div class="logo">
+               <img src="./images/logo-White.svg" alt="Shortly">
+           </div>
+
+           <!-- footer links -->
+           <div class="footer-links">
+               <!-- features -->
+               <div class="features-links">
+                     <h4>Features</h4>
+                     <ul class="features">
+                        <li><a href="#">Link Shortening</a></li>
+                        <li><a href="#">Branded Links</a></li>
+                        <li><a href="#">Analytics</a></li>
+                     </ul>
+               </div>
+               <!-- resources -->
+               <div class="resources-links">
+                  <h4>Resources</h4>
+                  <ul>
+                     <li><a href="#">Blog</a></li>
+                     <li><a href="#">Developers</a></li>
+                     <li><a href="#">Support</a></li>
+                  </ul>
+               </div>
+               <!-- company -->
+               <div class="company-links">
+                  <h4>Company</h4>
+                  <ul>
+                     <li><a href="#">About</a></li>
+                     <li><a href="#">Our Team</a></li>
+                     <li><a href="#">Careers</a></li>
+                     <li><a href="#">Contact</a></li>
+                  </ul>
+               </div>
+          </div>
+
+          <!-- social media links -->
+          <div class="social-media-links">
+             <ul>
+               <li><a href="#"><i class="fa-brands fa-facebook-square"></i></a></li>
+               <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+               <li><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
+               <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+             </ul>
+          </div>
+
+        </div>
+     </div>
+  </footer>
+  <!-- 
+  
+
+  
+  
+  
+   -->
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+</html>

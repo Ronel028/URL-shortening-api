@@ -1,0 +1,105 @@
+
+@import "variables";
+
+footer{
+    width: 100%;
+    height: auto;
+    background-color: var(--Very-Dark-Violet);
+    padding: toRem(71) 0 toRem(52);
+
+    
+    .footer-content{
+        display: grid;
+        grid-template-columns: 1fr 50% 1fr;
+        grid-template-rows: auto;
+
+        @media screen and(max-width: toRem(920)){
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, auto);
+            row-gap: toRem(30);
+        }
+
+        //footer logo
+        .logo{
+            @media screen and(max-width: toRem(920)){
+                justify-self: center;
+            }
+        }
+
+        // footer links
+        .footer-links{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: toRem(80);
+
+            @media screen and(max-width: toRem(1072)){
+                column-gap: toRem(16);
+                transition: column-gap 300ms ease-in-out;
+            }
+
+            @media screen and(max-width: toRem(920)){
+                justify-self: center;
+                column-gap: toRem(91);
+            }
+
+            @media screen and(max-width: toRem(700)){
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(3, auto);
+                row-gap: toRem(30);
+                text-align: center;
+            }
+
+            h4{
+                font-size: toRem(15);
+                color: var(--White);
+                font-weight: var(--font-bold);
+                margin-bottom: toRem(26);
+
+                @media screen and(max-width: toRem(700)){
+                    margin-bottom: toRem(15);
+                }
+            }
+            ul{
+                li{
+                    a{
+                        font-size: toRem(14);
+                        color: var(--Gray);
+                        font-weight: var(--font-medium);
+                        transition: color 200ms ease-in-out;
+
+                        &:hover{
+                            color: var(--Cyan);
+                        }
+                    }
+                }
+            }
+        }
+
+         // social media links
+         .social-media-links{
+            justify-self: end;
+
+            @media screen and(max-width: toRem(920)){
+                justify-self: center;
+            }
+
+            ul{
+                display: flex;
+                gap: toRem(21);
+                li{
+                    a{
+                        font-size: toRem(26);
+                        color: var(--White);
+                        transition: color 200ms ease-in-out;
+
+                        &:hover{
+                            color: var(--Cyan);
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+    
+}

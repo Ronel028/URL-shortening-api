@@ -1,0 +1,31 @@
+
+@import "variables";
+
+.boost{
+    width: 100%;
+    background: url("../images/bg-boost-desktop.svg"), var(--Dark-Violet);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media screen and(max-width: toRem(380)){
+        background-image: url("../images/bg-boost-mobile.svg");
+    }
+
+    .content{
+        padding-top: toRem(66);
+        padding-bottom: toRem(54);
+
+        text-align: center;
+
+        h2{
+            font-size: toRem(30);
+            color: var(--White);
+            margin-bottom: toRem(37);
+
+            @media screen and(max-width: toRem(380)){
+                font-size: toRem(25);
+            }
+        }
+    }
+}

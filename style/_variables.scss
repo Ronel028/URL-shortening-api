@@ -1,0 +1,24 @@
+
+:root{
+    // font
+    --font-poppins: 'Poppins', sans-serif;
+    --font-bold : 700;
+    --font-meduim : 500;
+
+    //cCOLOR
+    --Cyan: hsl(180, 66%, 49%);
+    --Dark-Violet: hsl(257, 27%, 26%);
+    --Red: hsl(0, 87%, 67%);
+    --Gray: hsl(0, 0%, 75%);
+    --Grayish-Violet: hsl(257, 7%, 63%);
+    --Very-Dark-Blue: hsl(255, 11%, 22%);
+    --Very-Dark-Violet: hsl(260, 8%, 14%);
+    --light-gray: #F0F1F6;
+    --White: #FFFFFF;
+}
+
+// convert px to rem function
+@function toRem($value) {
+    $remValue: ($value / 16) + rem; 
+    @return $remValue;
+}

@@ -1,0 +1,70 @@
+
+@import "variables";
+@import "header";
+@import "statistics";
+@import "boost";
+@import "footer";
+
+
+*, *::after, *::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: var(--font-poppins);
+}
+
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    font-size: toRem(16);
+}
+
+.container{
+    width: 90%;
+    max-width: toRem(1111);
+    margin: 0 auto;
+}
+
+.btn-cyan{
+    background-color: var(--Cyan);
+    padding: toRem(10) toRem(24);
+    border-radius: toRem(25);
+    color: var(--White) !important;
+    font-weight: var(--font-bold);
+    position: relative;
+    
+
+    &::after{
+        content: "";
+        background-color: var(--White);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        border-radius: toRem(25);
+        transition: all 200ms ease-in-out;
+    }
+
+    &:hover::after{
+        opacity: 50%;
+    }
+}
+
+// class for error in input
+.error-input{
+    border: 2px solid var(--Red) !important;
+
+    &::placeholder{
+        color: var(--Red);
+    }
+}
+.hide{
+    display: none;
+}
