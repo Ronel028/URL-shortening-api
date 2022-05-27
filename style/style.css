@@ -107,7 +107,22 @@ header nav .nav-links {
 
 @media screen and (max-width: 46.1875rem) {
   header nav .nav-links {
-    display: none;
+    background-color: var(--Dark-Violet);
+    width: 90%;
+    padding: 2.8125rem 1.3125rem 2.25rem;
+    border-radius: 0.625rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    top: 7.1875rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
 }
 
@@ -121,6 +136,36 @@ header nav .nav-links ul {
   gap: 1.75rem;
 }
 
+@media screen and (max-width: 46.1875rem) {
+  header nav .nav-links ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 46.1875rem) {
+  header nav .nav-links ul:first-child {
+    border-bottom: 1px solid var(--Grayish-Violet);
+    padding-bottom: 2.8125rem;
+    margin-bottom: 2.125rem;
+  }
+}
+
+@media screen and (max-width: 46.1875rem) {
+  header nav .nav-links ul .signup-btn {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 46.1875rem) {
+  header nav .nav-links ul .signup-btn a {
+    display: block;
+    text-align: center;
+  }
+}
+
 header nav .nav-links ul a {
   color: var(--Grayish-Violet);
   font-weight: var(--font-bold);
@@ -130,6 +175,15 @@ header nav .nav-links ul a {
 
 header nav .nav-links ul a:hover {
   color: var(--Very-Dark-Blue);
+}
+
+@media screen and (max-width: 46.1875rem) {
+  header nav .nav-links ul a {
+    color: var(--White);
+  }
+  header nav .nav-links ul a:hover {
+    color: var(--Cyan);
+  }
 }
 
 header nav .hamburger-menu {
@@ -305,6 +359,12 @@ header .hero .hero-title p {
   position: relative;
 }
 
+@media screen and (max-width: 46.1875rem) {
+  .statistics-section {
+    padding: 7.75rem 0;
+  }
+}
+
 .statistics-section .input-link {
   background: url("../images/bg-shorten-desktop.svg"), var(--Dark-Violet);
   background-repeat: no-repeat no-repeat;
@@ -362,7 +422,7 @@ header .hero .hero-title p {
         grid-template-columns: 1fr;
     -ms-grid-rows: (auto)[2];
         grid-template-rows: repeat(2, auto);
-    row-gap: 0.875rem;
+    row-gap: 1.9375rem;
   }
 }
 
@@ -447,8 +507,10 @@ header .hero .hero-title p {
   bottom: -1.75rem;
 }
 
-.statistics-section .output {
-  display: none;
+@media screen and (max-width: 46.1875rem) {
+  .statistics-section .input-link .form p {
+    bottom: 3.8125rem;
+  }
 }
 
 .statistics-section .output ul li {
@@ -467,6 +529,33 @@ header .hero .hero-title p {
           align-items: center;
 }
 
+@media screen and (max-width: 46.1875rem) {
+  .statistics-section .output ul li {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.statistics-section .output ul li .original-link {
+  width: 50%;
+}
+
+@media screen and (max-width: 46.1875rem) {
+  .statistics-section .output ul li .original-link {
+    width: 100%;
+    border-bottom: 1px solid var(--Grayish-Violet);
+    padding-bottom: 1.0625rem;
+  }
+}
+
+.statistics-section .output ul li .original-link p {
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+
 .statistics-section .output ul li .shorter-link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -477,8 +566,27 @@ header .hero .hero-title p {
   gap: 1.4375rem;
 }
 
+@media screen and (max-width: 46.1875rem) {
+  .statistics-section .output ul li .shorter-link {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    gap: 0;
+  }
+}
+
 .statistics-section .output ul li .shorter-link p {
   color: var(--Cyan);
+}
+
+@media screen and (max-width: 46.1875rem) {
+  .statistics-section .output ul li .shorter-link p {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    padding: 1.0625rem 0;
+  }
 }
 
 .statistics-section .output ul li .shorter-link button {
@@ -492,6 +600,20 @@ header .hero .hero-title p {
   color: var(--White);
   cursor: pointer;
   position: relative;
+}
+
+@media screen and (max-width: 46.1875rem) {
+  .statistics-section .output ul li .shorter-link button {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 25.875rem) {
+  .statistics-section .output ul li .shorter-link button {
+    padding: 0.75rem 2.125rem;
+    -webkit-transition: padding 300ms ease-in-out;
+    transition: padding 300ms ease-in-out;
+  }
 }
 
 .statistics-section .output ul li .shorter-link button::after {

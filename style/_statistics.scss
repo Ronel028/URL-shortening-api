@@ -9,6 +9,10 @@
     padding: toRem(102) 0;
     position: relative;
 
+    @media screen and(max-width: toRem(739)){
+        padding: toRem(124) 0;
+    }
+
      // input field
      .input-link{
         background: url('../images/bg-shorten-desktop.svg'), var(--Dark-Violet);
@@ -50,7 +54,7 @@
             @media screen and (max-width: toRem(739)){
                 grid-template-columns: 1fr;
                 grid-template-rows: repeat(2, auto);
-                row-gap: toRem(14);
+                row-gap: toRem(31);
             }
  
             input[type="text"]{
@@ -113,6 +117,10 @@
                 position: absolute;
                 left: 0;
                 bottom: toRem(-28);
+
+                @media screen and(max-width: toRem(739)){
+                    bottom: toRem(61);
+                }
  
             }
         }
@@ -120,7 +128,7 @@
 
     //  output
     .output{
-        display: none;
+        // display: none;
         ul{
             li{
                 background-color: var(--White);
@@ -131,13 +139,46 @@
                 justify-content: space-between;
                 align-items: center;
 
+                @media screen and(max-width: toRem(739)){
+                    flex-direction: column;
+                }
+
+                .original-link{
+                    width: 50%;
+                    @media screen and(max-width: toRem(739)){
+                        width: 100%;
+                        border-bottom: 1px solid var(--Grayish-Violet);
+                        padding-bottom: toRem(17);
+
+                        // white-space: nowrap;
+                        // overflow-x: hidden;
+                        // text-overflow: ellipsis;
+                    }
+                    p{
+                        white-space: nowrap;
+                        overflow-x: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+
                 .shorter-link{
                    display: flex;
                    align-items: center;
                    gap: toRem(23);
 
+                   @media screen and(max-width: toRem(739)){
+                        flex-direction: column;
+                        width: 100%;
+                        gap: 0;
+                    }
+
                    p{
                        color: var(--Cyan);
+
+                       @media screen and(max-width: toRem(739)){
+                        align-self: flex-start;
+                        padding: toRem(17) 0;
+                    } 
                    }
                    button{
                        padding: toRem(16) toRem(34);
@@ -150,6 +191,14 @@
                        color: var(--White);
                        cursor: pointer;
                        position: relative;
+
+                       @media screen and(max-width: toRem(739)){
+                            width: 100%;
+                        }
+                        @media screen and(max-width: toRem(414)){
+                            padding: toRem(12) toRem(34);
+                            transition: padding 300ms ease-in-out;
+                        }
 
                        &::after{
                             content: "";
