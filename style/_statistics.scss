@@ -128,7 +128,7 @@
 
     //  output
     .output{
-        // display: none;
+        display: none;
         ul{
             li{
                 background-color: var(--White);
@@ -218,6 +218,30 @@
                    }
                 }
             }
+        }
+    }
+
+    //loading
+    .circle-wrapper{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+       .circle{
+            display: none;
+            width: toRem(35);
+            height: toRem(35);
+            margin-top: toRem(25);
+            border: 3px solid var(--Very-Dark-Blue);
+            border-radius: 50%;
+            border-top-color: var(--Grayish-Violet);
+            animation: spin 2s linear infinite;
+        } 
+    }
+    
+    @keyframes spin {
+        100%{
+            transform: rotate(360deg);
         }
     }
 

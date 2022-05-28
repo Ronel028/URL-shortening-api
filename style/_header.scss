@@ -57,13 +57,15 @@ header{
                 width: 90%;
                 padding: toRem(45) toRem(21) toRem(36);
                 border-radius: toRem(10);
-                display: flex;
                 flex-direction: column;
 
                 position: absolute;
                 top: toRem(115);
                 left: 50%;
                 transform: translateX(-50%);
+
+                display: none;
+                
             }
             ul{
                 display: flex;
@@ -124,6 +126,10 @@ header{
 
             @media screen and (max-width: toRem(739)){
                 display: block; // block
+            }
+            
+            i.fa-xmark{
+                display: none;
             }
         }
     }

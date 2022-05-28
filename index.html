@@ -42,7 +42,8 @@
            </div>
            <!-- nav-button mobile -->
            <div class="hamburger-menu">
-             <i class="fa-solid fa-bars"></i>
+             <i id="menu-btn" class="fa-solid fa-bars"></i>
+             <i id="close-btn" class="fa-solid fa-xmark"></i>
            </div>
         </nav>
       <!-- end nav -->
@@ -68,37 +69,17 @@
       <!-- input field -->
          <div class="container input-link">
             <div class="form">
-            <input type="text" placeholder="Shorten a link here...">
-            <button>Shorten It!</button>
-            <p class="hide">Please add a link</p>
+            <input id="input-link" type="text" placeholder="Shorten a link here...">
+            <button id="submit-link">Shorten It!</button>
+            <p id="hide" class="hide">Please add a link</p>
             </div>
          </div>
 
         <div class="output">
-            <ul>
+            <!-- <ul>
                <li>
                   <div class="original-link">
                      <p>https://www.frontendmentor.io</p>
-                  </div>
-                  <div class="shorter-link">
-                     <p>https://rel.ink/k4lKyK</p>
-                     <button class="copy-link">Copy</button>
-                  </div>
-               </li>
-
-               <li>
-                  <div class="original-link">
-                     <p>https://www.frontendmentor.io</p>
-                  </div>
-                  <div class="shorter-link">
-                     <p>https://rel.ink/k4lKyK</p>
-                     <button class="copy-link">Copy</button>
-                  </div>
-               </li>
-
-               <li>
-                  <div class="original-link">
-                     <p>https://www.frontendmentor.iodfdfdfdsfdfsdfdfdsfsdfsdfsf</p>
                   </div>
                   <div class="shorter-link">
                      <p>https://rel.ink/k4lKyK</p>
@@ -106,7 +87,12 @@
                   </div>
                </li>
                
-            </ul>
+            </ul> -->
+         </div>
+
+         <!-- loading -->
+         <div class="circle-wrapper">
+            <div id="load" class="circle"></div>
          </div>
 
          <!-- Advance Statistics -->
@@ -212,6 +198,8 @@
         </div>
      </div>
   </footer>
+
+  <script src="./script/app.js"></script>
   <!-- 
   
 

@@ -111,9 +111,6 @@ header nav .nav-links {
     width: 90%;
     padding: 2.8125rem 1.3125rem 2.25rem;
     border-radius: 0.625rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -123,6 +120,7 @@ header nav .nav-links {
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
+    display: none;
   }
 }
 
@@ -200,6 +198,10 @@ header nav .hamburger-menu i {
   header nav .hamburger-menu {
     display: block;
   }
+}
+
+header nav .hamburger-menu i.fa-xmark {
+  display: none;
 }
 
 header .hero {
@@ -513,6 +515,10 @@ header .hero .hero-title p {
   }
 }
 
+.statistics-section .output {
+  display: none;
+}
+
 .statistics-section .output ul li {
   background-color: var(--White);
   padding: 1.0625rem 1.5625rem;
@@ -631,6 +637,43 @@ header .hero .hero-title p {
 .statistics-section .output ul li .shorter-link button:hover::after {
   opacity: 50%;
   background-color: var(--White);
+}
+
+.statistics-section .circle-wrapper {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.statistics-section .circle-wrapper .circle {
+  display: none;
+  width: 2.1875rem;
+  height: 2.1875rem;
+  margin-top: 1.5625rem;
+  border: 3px solid var(--Very-Dark-Blue);
+  border-radius: 50%;
+  border-top-color: var(--Grayish-Violet);
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 .statistics-section .main-content {
@@ -1062,5 +1105,15 @@ a {
 
 .hide {
   display: none;
+}
+
+.nav-show {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.display-output {
+  display: block !important;
 }
 /*# sourceMappingURL=style.css.map */
