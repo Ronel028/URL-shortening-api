@@ -67,10 +67,7 @@ let copyLink = ()=>{
     })
 }
 
-
-
-// short Link button
-submitLink.addEventListener('click', ()=>{
+let submitFunction = ()=>{
     let urlMatch = /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi;
 
     if(!inputLink.value.match(urlMatch) || inputLink.value == ''){
@@ -86,7 +83,19 @@ submitLink.addEventListener('click', ()=>{
         output.classList.add('display-output');
 
     } 
-})
+}
+
+// short Link button
+submitLink.addEventListener('click', submitFunction)
+inputLink.addEventListener("keyup", (e)=>{
+    if (e.keyCode === 13) {
+        e.preventDefault();
+        
+        submitFunction();
+    }
+});
+
+
 
 
 
