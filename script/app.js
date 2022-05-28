@@ -22,7 +22,6 @@ let inputLink = document.querySelector('#input-link');
 let submitLink = document.querySelector('#submit-link');
 let output = document.querySelector('.statistics-section .output');
 let loading = document.querySelector('#load');
-console.log(loading)
 
 let shortLink = async (link)=>{
     loading.style.display = 'block'
@@ -31,7 +30,6 @@ let shortLink = async (link)=>{
     loading.style.display = 'none'
     output.innerHTML = linkOutput(response.result.original_link, response.result.full_short_link);
 }
-
 let linkOutput = (original, short)=>{
    let data = `
         <ul>
@@ -49,8 +47,8 @@ let linkOutput = (original, short)=>{
    return data;
 }
 
-let btn = document.querySelector('.copy-link')
 
+//this function in to copy short link when you click button to clipboard
 let copyLink = ()=>{
     let copyLinkBtn = document.querySelector('.copy-link')
     let shortLink = document.querySelector("#link-short");
@@ -69,10 +67,13 @@ let copyLink = ()=>{
     })
 }
 
-submitLink.addEventListener('click', ()=>{
-    let urlR = /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi;
 
-    if(!inputLink.value.match(urlR) || inputLink.value == ''){
+
+// short Link button
+submitLink.addEventListener('click', ()=>{
+    let urlMatch = /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi;
+
+    if(!inputLink.value.match(urlMatch) || inputLink.value == ''){
         document.querySelector('#hide').classList.remove('hide');
         inputLink.classList.add('error-input');
         inputLink.value = ''
@@ -84,9 +85,7 @@ submitLink.addEventListener('click', ()=>{
         inputLink.value = ''
         output.classList.add('display-output');
 
-    }
-
-   
+    } 
 })
 
 
